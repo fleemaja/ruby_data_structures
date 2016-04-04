@@ -28,8 +28,8 @@ class HashSet
 
   def remove(key)
     num = key.hash
-    @store[num % num_buckets].delete(key) if include?(key)
     @count -= 1 if include?(key)
+    @store[num % num_buckets].delete(key) if include?(key)
   end
 
   private
