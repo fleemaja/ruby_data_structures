@@ -47,6 +47,15 @@ class LinkedList
     nil
   end
 
+  def get_link(key)
+    current = @head
+    while !current.nil?
+      return current if current.key.to_s == key.to_s
+      current = current.next
+    end
+    nil
+  end
+
   def include?(key)
     get(key) ? true : false
   end
